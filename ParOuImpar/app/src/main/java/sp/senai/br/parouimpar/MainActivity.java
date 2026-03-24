@@ -1,5 +1,6 @@
 package sp.senai.br.parouimpar;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -110,17 +111,31 @@ public class MainActivity extends AppCompatActivity {
             if(escolhaPI){
                 pontoVc++;
                 Toast.makeText(this, "Você ganhou!", Toast.LENGTH_SHORT).show();
+
+                txtResultVc.setBackgroundColor(Color.GREEN);
+                txtResultRobo.setBackgroundColor(Color.RED);
+
             } else {
                 pontoRobo++;
                 Toast.makeText(this, "Robô ganhou!", Toast.LENGTH_SHORT).show();
+
+                txtResultVc.setBackgroundColor(Color.RED);
+                txtResultRobo.setBackgroundColor(Color.GREEN);
             }
         } else {
             if(!escolhaPI){
                 pontoVc++;
                 Toast.makeText(this, "Você ganhou!", Toast.LENGTH_SHORT).show();
+
+                txtResultVc.setBackgroundColor(Color.GREEN);
+                txtResultRobo.setBackgroundColor(Color.RED);
+
             } else {
                 pontoRobo++;
                 Toast.makeText(this, "Robô ganhou!", Toast.LENGTH_SHORT).show();
+
+                txtResultVc.setBackgroundColor(Color.RED);
+                txtResultRobo.setBackgroundColor(Color.GREEN);
             }
         }
 
@@ -134,5 +149,7 @@ public class MainActivity extends AppCompatActivity {
         pontoRobo = 0;
         txtResultVc.setText("Você: " + pontoVc);
         txtResultRobo.setText("Robô: " + pontoRobo);
+        txtResultVc.setBackgroundColor(Color.WHITE);
+        txtResultRobo.setBackgroundColor(Color.WHITE);
     }
 }
